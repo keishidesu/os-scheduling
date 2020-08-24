@@ -1,6 +1,6 @@
 # Operating System Scheduling Algorithm
 
-[Screenshot of Program](./screenshot.png)
+![Screenshot of Program](./screenshot.png "Screenshot of Program")
 
 This project's purpose is to show the visualization of Operating System's scheduling algorithms specifically __Non-Preemptive SJF__, __Preemptive SJF__ and __Round Robin (Time Quantum 3)__. Moreover, a summary of the algorithms are visualized as a table where the turnaround and waiting time for each process are listed down. This project is developed using [Nuxt.js](https://nuxtjs.org/), a framework that is built on top of [Vue.js](https://vuejs.org/). This project is an assignment for Multimedia University's TSN2101 Operating System subject of the Computer Science course.     
 
