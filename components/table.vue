@@ -57,7 +57,7 @@ export default {
     return {
       algorithms: [
         {
-          name: "Round robin",
+          name: "Round Robin Time Quantum 3",
           func: rr_simulate,
           scheduler: new Scheduler(),
           moments: []

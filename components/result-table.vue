@@ -15,6 +15,11 @@
           <td>{{ process.timings.idle }}</td>
         </tr>
         <tr class="font-weight-bold">
+          <th scope="row">Total</th>
+          <td>{{ scheduler.getTotalTurnaroundTime() }}</td>
+          <td>{{ scheduler.getTotalWaitTime() }}</td>
+        </tr>
+        <tr class="font-weight-bold">
           <th scope="row">Average</th>
           <td>{{ scheduler.getAverageTurnaroundTime()  }}</td>
           <td>{{ scheduler.getAverageWaitTime() }}</td>

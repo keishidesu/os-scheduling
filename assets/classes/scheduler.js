@@ -37,22 +37,32 @@ export default class Scheduler {
     return (this.incomplete <= 0)
   }
 
-  /* Get average turnaround time */
-  getAverageTurnaroundTime() {
+  /* Get total turnaround time */
+  getTotalTurnaroundTime() {
     let sum = 0
     for (const process of this.processList) {
       sum += process.timings.elapsed
     }
-    return sum / this.processList.length
+    return sum
   }
 
-  /* Get average wait time */
-  getAverageWaitTime() {
+  /* Get average turnaround time */
+  getAverageTurnaroundTime() {
+    return this.getTotalTurnaroundTime() / this.processList.length
+  }
+
+  /* Get total wait time */
+  getTotalWaitTime() {
     let sum = 0
     for (const process of this.processList) {
       sum += process.timings.idle
     }
-    return sum / this.processList.length
+    return sum
+  }
+
+  /* Get average wait time */
+  getAverageWaitTime() {
+    return this.getTotalWaitTime() / this.processList.length
   }
 
   /* Get arrived shortest process */
