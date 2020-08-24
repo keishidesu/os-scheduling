@@ -92,6 +92,7 @@ export default {
   methods: {
     simulate () {
       for (const algorithm of this.algorithms) {
+        algorithm.scheduler = new Scheduler()
         for (const process of this.processes) {
           const { name, start, burst } = process
           algorithm.scheduler.registerProcess(new Process(name, parseInt(start), parseInt(burst)))

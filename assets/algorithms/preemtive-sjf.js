@@ -9,7 +9,7 @@ export default (scheduler) => {
     if (scheduler.hasHandlingProcess()) {
       if (scheduler.isHandlingCompleted() || scheduler.hasProcessArriving()) {
         const process = scheduler.getArrivedShortest()
-        if (process.timings.left !== scheduler.handlingProcess.timings.left) {
+        if (process === undefined || process.timings.left !== scheduler.handlingProcess.timings.left) {
           let moment = scheduler.switchProcess(process)
           if (moment) moments.push(moment)
         }
